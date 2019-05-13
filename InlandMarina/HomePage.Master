@@ -23,9 +23,10 @@
         <div class="menu">
             <ul>
                 <li><a class="removelinkdefault" href="#">HOME</a></li>
-                <li><a class="removelinkdefault" href="#">ABOUT</a></li>
+                <li><a class="removelinkdefault" href="#">AVAILABILITY</a></li>
                 <li><a class="removelinkdefault" href="#">CONTACT</a></li>
                 <li><a class="removelinkdefault" href="#">REGISTER</a></li>
+                <li><a class="removelinkdefault" href="#">LOGIN</a></li>
             </ul>
         </div>
     </nav>
@@ -49,7 +50,7 @@
     <%-- Video Header End --%>
 
     <!-- Home Page Content -->
-    <section class="spacing" id="services">
+    <section>
         <asp:ContentPlaceHolder ID="HomeContent" runat="server">
         </asp:ContentPlaceHolder>
     </section>

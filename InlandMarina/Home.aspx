@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="InlandMarina.WebForm1" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
     <div class="container">
       <div class="row">
