@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePage.Master.cs" Inherits="InlandMarina.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inland Marina</title>
+    <link rel="stylesheet" href="StyleSheet.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+</head>
+<body>
+
+    <%-- Navigation Menu --%>
+    <%--<div class="wrapper overlay">--%>
+    <nav class="stroke">
+        <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+            INLAND MARINA
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a class="removelinkdefault" href="#">HOME</a></li>
+                <li><a class="removelinkdefault" href="#">ABOUT</a></li>
+                <li><a class="removelinkdefault" href="#">CONTACT</a></li>
+                <li><a class="removelinkdefault" href="#">REGISTER</a></li>
+            </ul>
+        </div>
+    </nav>
+    <%-- Navigation Menu End --%>
+
+    <%-- Video Header --%>
+    <header>
+    <%--<div class="overlay"></div>--%>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="Assets/marina.mp4" type="video/mp4"/>
+    </video>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+              <img style= "height:400px; width:400px;" class="img-responsive" src="Assets/logo_transparent.png"/>
+           <%-- <p class="lead mb-0">Welcome to Inland Marina located on the south shore Inland Lake</p>--%>
+          </div>
+        </div>
+      </div>
+    </header>
+    <%-- Video Header End --%>
+
+    <!-- Home Page Content -->
+    <section class="spacing" id="services">
+        <asp:ContentPlaceHolder ID="HomeContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </section>
+    <%-- Home Page Content End --%>
+
+    <%-- Footer --%>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">INLAND MARINA © 2019</p>
+            </div>
+        </footer>
+    </div>
+    <%-- Footer End --%>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>

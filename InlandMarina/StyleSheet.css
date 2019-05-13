@@ -1,0 +1,437 @@
+﻿nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+    nav.stroke ul li a:after,
+    nav.fill ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+
+    nav.stroke ul li a:hover:after {
+        width: 100%;
+    }
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+    nav.fill ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+
+    nav.fill ul li a:hover {
+        color: #fff;
+        z-index: 1;
+    }
+
+        nav.fill ul li a:hover:after {
+            z-index: -10;
+            animation: fill 1s forwards;
+            -webkit-animation: fill 1s forwards;
+            -moz-animation: fill 1s forwards;
+            opacity: 1;
+        }
+
+.removelinkdefault {
+    text-decoration: none !important;
+}
+
+    .removelinkdefault:focus, .removelinkdefault:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .removelinkdefault:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+.spacing {
+    padding: 100px;
+}
+
+.top-margin {
+    margin-top: 70px;
+}
+/*footer styling*/
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+}
+
+    .footer-dark h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .footer-dark ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+            .footer-dark ul a:hover {
+                opacity: 0.8;
+            }
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-dark .item.social > a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+    .footer-dark .item.social > a:hover {
+        opacity: 0.9;
+    }
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+/*footer styling end*/
+
+/*card styling*/
+/*.article-clean {
+    color: #56585b;
+    background-color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+}
+
+    .article-clean .intro {
+        font-size: 16px;
+        margin: 0 auto 30px;
+    }
+
+        .article-clean .intro h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            padding-top: 20px;
+            line-height: 1.5;
+            color: inherit;
+            margin-top: 20px;
+        }
+
+        .article-clean .intro p {
+            color: #929292;
+            font-size: 12px;
+        }
+
+            .article-clean .intro p .by {
+                font-style: italic;
+            }
+
+            .article-clean .intro p .date {
+                text-transform: uppercase;
+                padding: 4px 0 4px 10px;
+                margin-left: 10px;
+                border-left: 1px solid #ddd;
+            }
+
+            .article-clean .intro p a {
+                color: #333;
+                text-transform: uppercase;
+                padding-left: 3px;
+            }
+
+        .article-clean .intro img {
+            margin-top: 20px;
+        }
+
+    .article-clean .text p {
+        margin-bottom: 20px;
+        line-height: 1.45;
+    }
+
+@media (min-width:768px) {
+    .article-clean .text p {
+        font-size: 16px;
+    }
+}
+
+.article-clean .text h2 {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    line-height: 1.45;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (min-width:768px) {
+    .article-clean .text h2 {
+        font-size: 20px;
+    }
+}
+
+.article-clean .text figure {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+    .article-clean .text figure img {
+        margin-bottom: 12px;
+        max-width: 100%;
+    }*/
+/*card styling end*/
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*img {
+    width:400px;
+    height:400px;
+}*/
+
+footer .img {
+    width: 150px;
+    height: 150px;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    opacity: 0.5;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+        header video {
+            display: none;
+        }
+}
+
+/* Navbar CSS */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: lighter;
+}
+
+/*header {
+    width: 100%;
+    height: 100vh;
+    background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}*/
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 86px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 99999;
+}
+
+    nav ul {
+        text-decoration: none;
+        line-height: 60px;
+        list-style: none;
+        background: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        color: #fff;
+        padding: 0;
+        text-align: right;
+        margin: 0;
+        padding-right: 100px;
+        transition: 1s;
+        font-weight: 500;
+    }
+
+    nav.black ul {
+        /*background: #000;*/
+        background-color: #282d32;
+        box-shadow: 0 0 20px rgba(0,0,0,.2);
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 16px 40px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+            nav ul li a,
+            nav ul li a:after,
+            nav ul li a:before {
+                transition: all .5s;
+            }
+
+                nav ul li a:hover {
+                    color: #555;
+                }
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 786px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
