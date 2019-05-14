@@ -1,4 +1,12 @@
-﻿/*Contact page*/
+﻿.section-subheading {
+    margin-bottom: 75px;
+}
+
+.page-section {
+    padding:100px 0;
+}
+
+/*Contact page*/
 .contact-clean {
     background: #f1f7fc;
     padding: 80px 0;
