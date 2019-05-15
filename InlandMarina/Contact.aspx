@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
        <div class="contact-clean">
         <form method="post">
+            <h1>Hello</h1>
             <h2 class="text-center">Contact us</h2>
             <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"/></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"/></div>
