@@ -29,6 +29,16 @@
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 }
 
+.Tels {
+    margin-top: 20px;
+    font-size: 18px;
+    color: saddlebrown;
+}
+
+.Agent {
+    margin-top: 20px;
+}
+
 @media (max-width:767px) {
     .contact-clean form {
         padding: 30px;
@@ -96,6 +106,12 @@
     margin-top: 15px;
     color: #fff;
 }
+
+.btn-primary{
+    position:absolute;
+    right:50px;
+}
+
 /*Contact page end*/
 nav.stroke ul li a,
 nav.fill ul li a {
