@@ -1,0 +1,11 @@
+
+.vs/config/applicationhost.config
+*.config
+.vs/InlandMarina/v15/.suo
+.vs/InlandMarina/v15/Server/sqlite3/storage.ide-shm
+InlandMarina/bin/InlandMarina.dll
+InlandMarina/bin/InlandMarina.pdb
+*.txt
+*.cache
+*.dll
+*.pdb
