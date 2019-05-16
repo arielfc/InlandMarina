@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Availability.aspx.cs" Inherits="InlandMarina.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
+    <form runat="server">
     <p>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
     </p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <br />
+            <br/>
             <div>
                 <div class="row">
                 <div class="col-md-6">
@@ -58,4 +59,5 @@
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-    </asp:Content>
+    </form>
+</asp:Content>
