@@ -9,3 +9,5 @@ InlandMarina/bin/InlandMarina.pdb
 *.cache
 *.dll
 *.pdb
+.vs/config/applicationhost.config
+InlandMarina/obj/Debug/InlandMarina.csproj.CoreCompileInputs.cache

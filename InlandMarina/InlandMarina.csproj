@@ -71,6 +71,7 @@
     <Content Include="Assets\logo_transparent.png" />
     <Content Include="Assets\marina.mp4" />
     <Content Include="JavaScript.js" />
+    <Content Include="Login.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
@@ -79,6 +80,13 @@
     <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomePage.Master.cs">
       <DependentUpon>HomePage.Master</DependentUpon>

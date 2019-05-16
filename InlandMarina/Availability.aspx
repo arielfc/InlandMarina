@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Availability.aspx.cs" Inherits="InlandMarina.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
+    <form runat="server">
     <p>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
@@ -8,7 +9,7 @@
     <p>Available Docks</p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <br />
+            <br/>
             <div>
                 <p>
                 </p>
@@ -55,4 +56,5 @@
             </asp:GridView>
         </ContentTemplate>
     </asp:UpdatePanel>
-    </asp:Content>
+    </form>
+</asp:Content>

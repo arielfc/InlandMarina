@@ -114,3 +114,7 @@ C:\Users\barba\source\repos\InlandMarina\InlandMarina\bin\BusinessLayer.dll
 C:\Users\barba\source\repos\InlandMarina\InlandMarina\bin\DataLayer.dll
 C:\Users\barba\source\repos\InlandMarina\InlandMarina\bin\BusinessLayer.pdb
 C:\Users\barba\source\repos\InlandMarina\InlandMarina\bin\DataLayer.pdb
+C:\Users\student\source\repos\InlandMarina\InlandMarina\bin\BusinessLayer.dll
+C:\Users\student\source\repos\InlandMarina\InlandMarina\bin\DataLayer.dll
+C:\Users\student\source\repos\InlandMarina\InlandMarina\bin\BusinessLayer.pdb
+C:\Users\student\source\repos\InlandMarina\InlandMarina\bin\DataLayer.pdb
