@@ -49,6 +49,24 @@ namespace InlandMarina {
         protected global::System.Web.UI.WebControls.Label LblDockWarning;
         
         /// <summary>
+        /// LblCustomerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCustomerName;
+        
+        /// <summary>
+        /// GridViewCurrentLease control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewCurrentLease;
+        
+        /// <summary>
         /// LblSelectedDock control.
         /// </summary>
         /// <remarks>
@@ -74,23 +92,5 @@ namespace InlandMarina {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// LblCustomerName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCustomerName;
-        
-        /// <summary>
-        /// GridViewCurrentLease control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewCurrentLease;
     }
 }
