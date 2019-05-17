@@ -1,4 +1,8 @@
-﻿/*register page*/
+﻿.text-white-75 {
+    color:white;
+    font-weight:500;
+}
+/*register page*/
 .registration-form {
     padding: 50px 0;
 }
@@ -202,10 +206,10 @@
     color: #fff;
 }
 
-.btn-primary{
+/*.btn-primary{
     position:absolute;
     right:50px;
-}
+}*/
 
 /*Contact page end*/
 nav.stroke ul li a,
@@ -455,7 +459,7 @@ body {
     line-height: 60px;
     position: fixed;
     float: left;
-    margin: 16px 86px;
+    margin-top:-85px;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -479,7 +483,6 @@ nav {
         padding: 0;
         text-align: right;
         margin: 0;
-        padding-right: 100px;
         transition: 1s;
         font-weight: 500;
     }
