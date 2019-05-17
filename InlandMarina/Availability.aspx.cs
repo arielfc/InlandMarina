@@ -14,6 +14,7 @@ namespace InlandMarina
         int customerID = 2;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             try
             {
                 GridViewDock0.DataSource = DockDB.GetDocks();
@@ -81,7 +82,9 @@ namespace InlandMarina
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            // add lease here
+            GridViewRow dock = GridViewSlip.SelectedRow;
+            
+            LeaseDB.AddLease(Convert.ToInt32(dock.Cells[0].Text), customerID);
 
             GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
             GridViewCurrentLease.DataBind();

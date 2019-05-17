@@ -111,6 +111,27 @@ namespace DataLayer
             }
             return result;
         }
+        public static bool AddLease(int slipid, int customerid)
+        {
+            string sql = "INSERT INTO Lease" +
+                " (SlipId, CustomerID) " +
+                " VALUES " +
+                "(@slipid, @customerid)";
+            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlCommand command = new SqlCommand(sql, connection);
+
+            command.Parameters.AddWithValue("@SlipId", slipid);
+            command.Parameters.AddWithValue("@CustomerID", customerid);
+
+            if (command.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 
