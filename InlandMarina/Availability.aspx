@@ -8,10 +8,9 @@
     </p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <br/>
             <div>
                 <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 ml-md-5">
                     <p>Available Docks</p>
                     <asp:GridView ID="GridViewDock0" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedIndex="2">
                         <Columns>
@@ -23,11 +22,11 @@
                         </Columns>
                         <SelectedRowStyle BackColor="Silver" />
                     </asp:GridView>
-                    <asp:Label ID="LblDockWarning" runat="server" Text="DataSource Error!" Visible="False"></asp:Label>
+                    <asp:Label ID="LblDockWarning" runat="server" Text="Exception Text" Visible="False"></asp:Label>
                     <br />
                     Current Lease of Customer
                     <asp:Label ID="LblCustomerName" runat="server" Text="Name"></asp:Label>
-                    <br />
+                    <br /><br />
                     <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
@@ -37,9 +36,10 @@
                     </asp:GridView>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     Available Slips of&nbsp;&nbsp;
                     <asp:Label ID="LblSelectedDock" runat="server" Text="Selected Dock"></asp:Label>
+                    <br />
                     <br />
             
                     <asp:GridView ID="GridViewSlip" runat="server" AutoGenerateColumns="False" Width="276px">
