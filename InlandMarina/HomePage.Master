@@ -16,11 +16,12 @@
     <%-- Navigation Menu --%>
     <%--<div class="wrapper overlay">--%>
     <nav class="stroke">
+        <div class="container">
         <div class="menu-icon">
             <i class="fa fa-bars fa-2x"></i>
         </div>
         <div class="logo">
-            INLAND MARINA
+            <img style= "height:250px; width:250px;" class="img-responsive" src="Assets/logo2.png"/>
         </div>
         <div class="menu">
             <ul>
@@ -31,21 +32,41 @@
                 <li><a class="removelinkdefault" href="Login.aspx">LOGIN</a></li>
             </ul>
         </div>
+        </div>
     </nav>
     <%-- Navigation Menu End --%>
 
     <%-- Video Header --%>
+   <%-- <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </header>--%>
     <header>
-    <%--<div class="overlay"></div>--%>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="Assets/marina.mp4" type="video/mp4"/>
-    </video>
+    <div class="overlay">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="Assets/marina.mp4" type="video/mp4"/>
+        </video>
+    </div>
       <div class="container h-100">
-        <div class="d-flex h-100 text-center align-items-center">
-          <div class="w-100 text-white">
-              <img style= "height:400px; width:400px;" class="img-responsive" src="Assets/logo_transparent.png"/>
-           <%-- <p class="lead mb-0">Welcome to Inland Marina located on the south shore Inland Lake</p>--%>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class="col-lg-10 align-self-end">
+              <h1 class="text-uppercase text-white font-weight-bold">WELCOME TO INLAND MARINA</h1>
+              <hr class="divider my-4">
           </div>
+          <div class="col-lg-8 align-self-baseline">
+              <p class="text-white-75 mb-5"> located on the south shore Inland Lake,<br /> just a small commute from major centers in the south west.</p>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">AVAILABILITY</a>
+         </div>
         </div>
       </div>
     </header>

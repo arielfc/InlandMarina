@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\bahamas.mp4" />
+    <Content Include="Assets\logo1.png" />
+    <Content Include="Assets\logo2.png" />
     <Content Include="Assets\logo_transparent.png" />
     <Content Include="Assets\marina.mp4" />
     <Content Include="JavaScript.js" />
