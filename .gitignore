@@ -10,3 +10,5 @@ InlandMarina/bin/InlandMarina.pdb
 *.dll
 *.pdb
 .vs/InlandMarina/v15/.suo
+.vs/InlandMarina/v15/.suo
+.vs/InlandMarina/v15/Server/sqlite3/storage.ide-wal

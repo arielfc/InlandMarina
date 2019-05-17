@@ -8,11 +8,15 @@
     </p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <div>
+            <div class="container">
                 <div class="row">
-                <div class="col-md-6 ml-md-5">
-                    <p>Available Docks</p>
-                    <asp:GridView ID="GridViewDock0" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" SelectedIndex="2">
+                <div class="ml-lg-5 ml-md-5 ml-sm-5 ml-5">
+                    Available Docks
+                    <br /><br />
+                    <asp:GridView ID="GridViewDock0" runat="server" AutoGenerateColumns="False" 
+                        OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
+                        SelectedIndex="0" 
+                        CssClass="table table-responsive table-striped table-hover table-bordered">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="ID" />
                             <asp:BoundField DataField="Name" HeaderText="Name" />
@@ -21,28 +25,32 @@
                             <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                         </Columns>
                         <SelectedRowStyle BackColor="Silver" />
+                        
                     </asp:GridView>
                     <asp:Label ID="LblDockWarning" runat="server" Text="Exception Text" Visible="False"></asp:Label>
                     <br />
                     Current Lease of Customer
                     <asp:Label ID="LblCustomerName" runat="server" Text="Name"></asp:Label>
                     <br /><br />
-                    <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False">
+                    <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False" 
+                        CssClass="table table-responsive table-striped table-hover">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
                             <asp:BoundField DataField="SlipID" HeaderText="Slip ID" />
                             <asp:BoundField DataField="CustomerID" HeaderText="Customer ID" Visible="False" />
                         </Columns>
                     </asp:GridView>
+                    <br />
                 </div>
 
-                <div class="col-md-4">
-                    Available Slips of&nbsp;&nbsp;
+                <div class="ml-lg-5 ml-md-5 ml-sm-5 ml-5">
+                    Available Slips of &nbsp;&nbsp;
                     <asp:Label ID="LblSelectedDock" runat="server" Text="Selected Dock"></asp:Label>
                     <br />
                     <br />
-            
-                    <asp:GridView ID="GridViewSlip" runat="server" AutoGenerateColumns="False" Width="276px">
+                    <asp:GridView ID="GridViewSlip" runat="server" AutoGenerateColumns="False" 
+                        AllowPaging="true" PageSize="5" 
+                        CssClass="table table-responsive table-striped table-hover table-bordered">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="Slip ID" />
                             <asp:BoundField DataField="Width" HeaderText="Width" />

@@ -18,7 +18,7 @@ namespace DataLayer
             try
             {
                 string sql = "SELECT ID, FirstName, LastName, Phone, City, " +
-                    "UserName, PassWord" +
+                    " UserName, PassWord" +
                     " FROM Customer WHERE ID=" + ID;
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
@@ -54,8 +54,8 @@ namespace DataLayer
             try
             {
                 string sql = "SELECT ID, FirstName, LastName, Phone, City, " +
-                    "UserName, PassWord" +
-                    " FROM Customer WHERE Username=" + un;
+                    " UserName, PassWord" +
+                    "  FROM Customer WHERE UserName='" + un+"'";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader =
                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
@@ -74,7 +74,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+                return null;
             }
             finally
             {

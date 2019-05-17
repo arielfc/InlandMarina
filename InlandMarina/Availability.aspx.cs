@@ -11,10 +11,10 @@ namespace InlandMarina
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        int customerID = 2;
+        int customerID = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //GridViewDock0.HeaderRow.TableSection = TableRowSection.TableHeader;
             try
             {
                 GridViewDock0.DataSource = DockDB.GetDocks();
@@ -88,6 +88,7 @@ namespace InlandMarina
 
             GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
             GridViewCurrentLease.DataBind();
+            GridViewSlip_Available();
         }
     }
 }
