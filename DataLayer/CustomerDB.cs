@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using BusinessLayer;
+using System.Security.Cryptography;
 
 
 namespace DataLayer
@@ -46,7 +47,7 @@ namespace DataLayer
             return s;
 
         }
-
+        
         public static Customer GetCustomer(string un)
         {
             SqlConnection connection = MarinaDB.GetConneciton();
@@ -83,7 +84,17 @@ namespace DataLayer
             return s;
 
         }
-
+        public static string Md5Encrypt32(string str)
+        {
+            System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] data = md5.ComputeHash(System.Text.Encoding.Default.GetBytes(str));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
+            {
+                sb.Append(data[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
         public static bool AddCustomer(string FirstName, string LastName,
             string Phone, string City, string UserName, string Password)
         {
@@ -99,7 +110,9 @@ namespace DataLayer
             command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@City", City);
             command.Parameters.AddWithValue("@UserName", UserName);
-            command.Parameters.AddWithValue("@Password", Password);
+            // Hash password 20190517 to UPPERCASE hash code
+            string pwHash = Md5Encrypt32(Password);
+            command.Parameters.AddWithValue("@Password", pwHash);
 
             if (command.ExecuteNonQuery() > 0)
             {

@@ -32,6 +32,11 @@ namespace InlandMarina
                 {
                     LblCustomerName.Text = "Good00";
                 }
+                
+                if (CustomerDB.AddCustomer("Hohoho", "Hahaha", "568", "Washington","HH", "1"))
+                {
+                    LblCustomerName.Text = "Good01";
+                }
                 20190517 for test only */
             }
             catch (Exception ex)
