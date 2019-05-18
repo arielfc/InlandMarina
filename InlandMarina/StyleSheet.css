@@ -487,10 +487,11 @@ nav {
         font-weight: 500;
     }
 
-    nav.black ul {
+    nav.black {
         /*background: #000;*/
         background-color: #282d32;
         box-shadow: 0 0 20px rgba(0,0,0,.2);
+        transition: 1.2s;
     }
 
     nav ul li {
