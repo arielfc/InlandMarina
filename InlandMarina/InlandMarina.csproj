@@ -72,6 +72,7 @@
     <Content Include="Assets\logo2.png" />
     <Content Include="Assets\logo_transparent.png" />
     <Content Include="Assets\marina.mp4" />
+    <Content Include="Assets\splash.mp4" />
     <Content Include="JavaScript.js" />
     <Content Include="Login.aspx" />
     <Content Include="StyleSheet.css" />

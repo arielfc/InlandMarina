@@ -54,17 +54,18 @@
     <header>
     <div class="overlay">
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="Assets/marina.mp4" type="video/mp4"/>
+            <source src="Assets/splash.mp4" type="video/mp4"/>
         </video>
     </div>
       <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
           <div class="col-lg-10 align-self-end">
-              <h1 class="text-uppercase text-white font-weight-bold">WELCOME TO INLAND MARINA</h1>
+              <h1 class="text-uppercase text-white font-weight-bold">WELCOME TO INLAND MARINA<br />YOUR PARADISE AWAITS</h1>
+              <h3 class="text-uppercase text-white font-weight-normal">YOUR PARADISE AWAITS</h3>
               <hr class="divider my-4">
           </div>
           <div class="col-lg-8 align-self-baseline">
-              <p class="text-white-75 mb-5"> located on the south shore Inland Lake,<br /> just a small commute from major centers in the south west.</p>
+              <%--<p class="text-white-75 mb-5"> located on the south shore Inland Lake,<br /> just a small commute from major centers in the south west.</p>--%>
               <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">AVAILABILITY</a>
          </div>
         </div>
