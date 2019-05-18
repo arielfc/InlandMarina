@@ -91,7 +91,7 @@ namespace DataLayer
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < data.Length; i++)
             {
-                sb.Append(data[i].ToString("X2"));
+                sb.Append(data[i].ToString("x2"));
             }
             return sb.ToString();
         }
