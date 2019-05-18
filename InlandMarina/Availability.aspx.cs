@@ -16,10 +16,10 @@ namespace InlandMarina
         {
             //GridViewDock0.HeaderRow.TableSection = TableRowSection.TableHeader;
             try
-            {
+            {/*
                 GridViewDock0.DataSource = DockDB.GetDocks();
                 GridViewDock0.DataBind();
-
+                */
                 //20190514 
                 //GridViewDock.DataSourceObject;
                 //gridviewdock.datavalueobject;
@@ -72,8 +72,8 @@ namespace InlandMarina
                 }
             }
 
-            GridViewSlip.DataSource = slip_Available;
-            GridViewSlip.DataBind();
+            GridViewSlip0.DataSource = slip_Available;
+            GridViewSlip0.DataBind();
         }
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
@@ -82,13 +82,18 @@ namespace InlandMarina
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            GridViewRow dock = GridViewSlip.SelectedRow;
+            GridViewRow dock = GridViewSlip0.SelectedRow;
             
             LeaseDB.AddLease(Convert.ToInt32(dock.Cells[0].Text), customerID);
 
             GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
             GridViewCurrentLease.DataBind();
             GridViewSlip_Available();
+        }
+
+        protected void GridViewSlip0_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
