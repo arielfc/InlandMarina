@@ -14,24 +14,25 @@ namespace InlandMarina
         int customerID = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //GridViewDock0.HeaderRow.TableSection = TableRowSection.TableHeader;
             try
             {/*
                 GridViewDock0.DataSource = DockDB.GetDocks();
                 GridViewDock0.DataBind();
-                */
-                //20190514 
-                //GridViewDock.DataSourceObject;
-                //gridviewdock.datavalueobject;
-                //GridViewDock.DataSourceID = Dock.ID;
-                //GridViewDock.DataSourceID = Dock.ID;
-
+                20190517 commented because these are setting up on page*/
+                
+                
                 GridViewSlip_Available();
                 LblCustomerName.Text =
                     CustomerDB.GetCustomer(customerID).FirstName
                     + " " + CustomerDB.GetCustomer(customerID).LastName;
                 GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
                 GridViewCurrentLease.DataBind();
+                /*
+                if (CustomerDB.UpdateCustomer(5, "Tom", "Hanks", "568", "Washington"))
+                {
+                    LblCustomerName.Text = "Good00";
+                }
+                20190517 for test only */
             }
             catch (Exception ex)
             {

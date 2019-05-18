@@ -115,7 +115,7 @@ namespace DataLayer
         {
             string sql = "UPDATE Customer" +
                 " Set FirstName=@FirstName, LastName=@LastName, " +
-                " Phone=@Phone, City=@City) " +
+                " Phone=@Phone, City=@City " +
                 " WHERE ID =" + ID;
             SqlConnection connection = MarinaDB.GetConneciton();
             SqlCommand command = new SqlCommand(sql, connection);
