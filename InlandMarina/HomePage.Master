@@ -52,7 +52,6 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter A Username" ControlToValidate="TextBox7" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>--%>
                         <div class="form-group position-relative">
-                            <label for="logInEmail1"></label>   
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
                         </div>
@@ -60,7 +59,6 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter A Password" ControlToValidate="TextBox8" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>--%>
                         <div class="form-group position-relative">
-                            <label for="logInPassword"></label>
                             <i class="fa fa-lock" aria-hidden="true"></i>
                             <asp:TextBox CssClass="form-control item" ID="TextBox8" placeholder="Password" runat="server"></asp:TextBox>
                         </div>

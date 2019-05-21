@@ -22,8 +22,8 @@ namespace InlandMarina
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            string username = TextBox5.Text;
-            string hashpwd = CustomerDB.Md5Encrypt32(TextBox6.Text);
+            string username = TextBox7.Text;
+            string hashpwd = CustomerDB.Md5Encrypt32(TextBox8.Text);
             Customer customer = CustomerDB.GetCustomer(username);
             if (customer.UserName == username && hashpwd == customer.PassWord)
             {
