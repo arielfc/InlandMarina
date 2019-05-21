@@ -128,7 +128,16 @@
                 <li><a class="removelinkdefault" href="Home.aspx">HOME</a></li>
                 <li><a class="removelinkdefault" href="Availability.aspx">AVAILABILITY</a></li>
                 <li><a class="removelinkdefault" href="Contact.aspx">CONTACT</a></li>
-                <li><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">ACCOUNT</a></li>
+                <% if (Session["ID"] == null) { %>
+                    <li id="li_account" runat="server"><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">LOGIN / SIGNUP</a></li>
+                <% } else { %>
+                    <li><a class="removelinkdefault" href="Account.aspx">ACCOUNT</a></li>
+                    <li><a class="removelinkdefault" href="Logout.aspx">LOGOUT</a></li>
+                <%} %>
+            <%--    <li id="li_account" runat="server"><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">
+                    <asp:Label ID="Label1" runat="server" Text="ACCOUNT"></asp:Label></a></li>
+                <li><a class="removelinkdefault" href="Contact.aspx">LOGOUT</a></li>--%>
+
             </ul>
         </div>
         </div>

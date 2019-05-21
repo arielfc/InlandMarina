@@ -103,6 +103,15 @@ namespace InlandMarina {
         protected global::System.Web.UI.WebControls.Button RegisterButton;
         
         /// <summary>
+        /// li_account control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_account;
+        
+        /// <summary>
         /// HomeContent control.
         /// </summary>
         /// <remarks>

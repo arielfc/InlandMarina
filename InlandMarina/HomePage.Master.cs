@@ -30,7 +30,7 @@ namespace InlandMarina
                 // If both usemname and password match database, set session["ID"] and redirect to home page
                 //	Response.Write("<script>alert('Match!')</script>");
                 Session["ID"] = customer.ID;
-                Response.Redirect("Home.aspx");
+                Response.Redirect("Account.aspx");
             }
             else
             {
