@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
     <div class="registration-form">
-        <form runat="server">
+        <form>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>

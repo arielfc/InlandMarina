@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="InlandMarina.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
     <div class="registration-form">
-        <form runat="server">
+        <form>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>       

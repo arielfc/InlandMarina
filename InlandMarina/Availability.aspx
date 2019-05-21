@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Availability.aspx.cs" Inherits="InlandMarina.WebForm3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
-    <form runat="server">
     <p>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
@@ -69,5 +68,4 @@
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-    </form>
 </asp:Content>

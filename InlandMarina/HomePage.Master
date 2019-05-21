@@ -10,11 +10,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"/>
+
+<%--    <script src="JavaScript.js"></script>--%>
 </head>
 <body>
-    <%--<form runat="server">--%>
+    <form runat="server">
+
+    <!-- The Modal -->
+    <div class="modal fade text-center" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title ">Login / Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Initial Sign up Prompt -->
+                <div class="modal-body modal-connect">
+                    <div class="social_login">
+                        <a href="#" class="btn btn-primary position-relative">
+                            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png">
+                            <span class="icon_title">Connect with Facebook</span>
+                        </a>
+                        <a href="#" class="btn btn-danger  position-relative">
+                            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-google-plus-512.png">
+                            <span class="icon_title">Connect with Google</span>
+                        </a>
+                    </div>
+                    <p></p>
+                    <div class="buttons">
+                        <a class="btn btn-info button button-login" href="#" role="button">Login</a>
+                        <a class="btn btn-info button button-register" href="#" role="button">Register</a>
+                    </div>
+                </div>
+                <!-- Initial Sign up Prompt End -->
+                <%--Login Modal--%>
+                <div class="modal-body modal-login">
+                    <h2>Login</h2>
+                    <form>
+                        <%--<div class="form-group position-relative">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter A Username" ControlToValidate="TextBox7" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>--%>
+                        <div class="form-group position-relative">
+                            <label for="logInEmail1"></label>   
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
+                        </div>
+                        <%--<div class="form-group position-relative">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter A Password" ControlToValidate="TextBox8" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>--%>
+                        <div class="form-group position-relative">
+                            <label for="logInPassword"></label>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox8" placeholder="Password" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group position-relative">
+                            <button type="button" class="btn btn-dark button-back">Back</button>
+                            <asp:Button type="submit" CssClass="btn btn-primary" ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click"/>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Login Modal -->
+
+                <!-- Start Register Modal -->
+                <div class="modal-body modal-register">
+                    <h2>Register</h2>
+                    <form>
+                        <div class="form-group position-relative">
+                            <i class="fa fa-file-signature" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox1" placeholder="First Name" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group position-relative">
+                            <i class="fa fa-file-signature" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox2" placeholder="Last Name" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group position-relative">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox3" placeholder="Phone Number" runat="server"></asp:TextBox>
+                        </div>
+                         <div class="form-group position-relative">
+                            <i class="fa fa-city" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox4" placeholder="City" runat="server"></asp:TextBox>
+                        </div>
+                         <div class="form-group position-relative">
+                             <i class="fa fa-user" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox5" placeholder="Username" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group position-relative">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <asp:TextBox CssClass="form-control item" ID="TextBox6" placeholder="Password" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group position-relative">
+                            <button type="button" class="btn btn-dark button-back">Back</button>
+                            <asp:Button type="submit" CssClass="btn btn-primary" ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click"/>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Register body -->
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%--Signup / Login Modal End--%>
+
     <%-- Navigation Menu --%>
-    <%--<div class="wrapper overlay">--%>
     <nav class="stroke">
         <div class="container">
         <div class="menu-icon">
@@ -28,8 +130,7 @@
                 <li><a class="removelinkdefault" href="Home.aspx">HOME</a></li>
                 <li><a class="removelinkdefault" href="Availability.aspx">AVAILABILITY</a></li>
                 <li><a class="removelinkdefault" href="Contact.aspx">CONTACT</a></li>
-                <li><a class="removelinkdefault" href="Register.aspx">REGISTER</a></li>
-                <li><a class="removelinkdefault" href="Login.aspx">LOGIN</a></li>
+                <li><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">ACCOUNT</a></li>
             </ul>
         </div>
         </div>
@@ -37,24 +138,10 @@
     <%-- Navigation Menu End --%>
 
     <%-- Video Header --%>
-   <%-- <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-          <hr class="divider my-4">
-        </div>
-        <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-        </div>
-      </div>
-    </div>
-  </header>--%>
     <header>
     <div class="overlay">
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="Assets/marina.mp4" type="video/mp4"/>
+            <source src="Assets/boats.mp4" type="video/mp4"/>
         </video>
     </div>
       <div class="container h-100">
@@ -65,13 +152,13 @@
           </div>
           <div class="col-lg-8 align-self-baseline">
               <p class="text-white-75 mb-5"> located on the south shore Inland Lake,<br /> just a small commute from major centers in the south west.</p>
-              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">AVAILABILITY</a>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="Availability.aspx">AVAILABILITY</a>
          </div>
         </div>
       </div>
     </header>
     <%-- Video Header End --%>
-
+    
     <!-- Home Page Content -->
     <section class="page-section">
         <asp:ContentPlaceHolder ID="HomeContent" runat="server">
@@ -111,9 +198,12 @@
         </footer>
     </div>
     <%-- Footer End --%>
-    <%--</form>--%>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascript.js"></script>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="JavaScript.js"></script>
 </body>
 </html>
