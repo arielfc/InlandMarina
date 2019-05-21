@@ -14,7 +14,7 @@
 <body>
     <form runat="server">
 
-    <!-- The Modal -->
+    <!-- Login / Signup Modal -->
     <div class="modal fade text-center" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -46,14 +46,8 @@
                 <div class="modal-body modal-login">
                 <h2>Login</h2>
                     <div class="form-group position-relative">
-                        <asp:RequiredFieldValidator display="Dynamic" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter A UserName" ControlToValidate="TextBox7"></asp:RequiredFieldValidator>
-                    </div>
-                    <div class="form-group position-relative">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group position-relative">
-                        <asp:RequiredFieldValidator display="Dynamic" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter A Password" ControlToValidate="TextBox8"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group position-relative">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -65,7 +59,6 @@
                     </div>
                 </div>
                 <!-- End Login Modal -->
-
                 <!-- Start Register Modal -->
                 <div class="modal-body modal-register">
                     <h2>Register</h2>
@@ -120,11 +113,12 @@
         <div class="menu">
             <ul>
                 <li><a class="removelinkdefault" href="Home.aspx">HOME</a></li>
-                <li><a class="removelinkdefault" href="Availability.aspx">AVAILABILITY</a></li>
                 <li><a class="removelinkdefault" href="Contact.aspx">CONTACT</a></li>
                 <% if (Session["ID"] == null) { %>
+                    <li><a class="removelinkdefault" href="Availability.aspx">AVAILABILITY</a></li>
                     <li id="li_account" runat="server"><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">LOGIN / SIGNUP</a></li>
                 <% } else { %>
+                    <li><a class="removelinkdefault" href="Availability.aspx">LEASE SLIPS</a></li>
                     <li><a class="removelinkdefault" href="Account.aspx">ACCOUNT</a></li>
                     <li><a class="removelinkdefault" href="Logout.aspx">LOGOUT</a></li>
                 <%} %>
@@ -197,7 +191,6 @@
     <%-- Footer End --%>
 
     </form>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
