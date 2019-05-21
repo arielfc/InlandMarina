@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"/>
-
-<%--    <script src="JavaScript.js"></script>--%>
 </head>
 <body>
     <form runat="server">
@@ -46,63 +44,59 @@
                 <!-- Initial Sign up Prompt End -->
                 <%--Login Modal--%>
                 <div class="modal-body modal-login">
-                    <h2>Login</h2>
-                    <form>
-                        <%--<div class="form-group position-relative">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter A Username" ControlToValidate="TextBox7" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>--%>
-                        <div class="form-group position-relative">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
-                        </div>
-                        <%--<div class="form-group position-relative">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter A Password" ControlToValidate="TextBox8" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>--%>
-                        <div class="form-group position-relative">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox8" placeholder="Password" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group position-relative">
-                            <button type="button" class="btn btn-dark button-back">Back</button>
-                            <asp:Button type="submit" CssClass="btn btn-primary" ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click"/>
-                        </div>
-                    </form>
+                <h2>Login</h2>
+                    <div class="form-group position-relative">
+                        <asp:RequiredFieldValidator display="Dynamic" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Enter A UserName" ControlToValidate="TextBox7"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <asp:RequiredFieldValidator display="Dynamic" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please Enter A Password" ControlToValidate="TextBox8"></asp:RequiredFieldValidator>
+                    </div>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox8" placeholder="Password" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <button type="button" class="btn btn-dark button-back">Back</button>
+                        <asp:Button type="submit" CssClass="btn btn-primary" ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click"/>
+                    </div>
                 </div>
                 <!-- End Login Modal -->
 
                 <!-- Start Register Modal -->
                 <div class="modal-body modal-register">
                     <h2>Register</h2>
-                    <form>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-file-signature" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox1" placeholder="First Name" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-file-signature" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox2" placeholder="Last Name" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox3" placeholder="Phone Number" runat="server"></asp:TextBox>
+                    </div>
                         <div class="form-group position-relative">
-                            <i class="fa fa-file-signature" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox1" placeholder="First Name" runat="server"></asp:TextBox>
-                        </div>
+                        <i class="fa fa-city" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox4" placeholder="City" runat="server"></asp:TextBox>
+                    </div>
                         <div class="form-group position-relative">
-                            <i class="fa fa-file-signature" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox2" placeholder="Last Name" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group position-relative">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox3" placeholder="Phone Number" runat="server"></asp:TextBox>
-                        </div>
-                         <div class="form-group position-relative">
-                            <i class="fa fa-city" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox4" placeholder="City" runat="server"></asp:TextBox>
-                        </div>
-                         <div class="form-group position-relative">
-                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox5" placeholder="Username" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group position-relative">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <asp:TextBox CssClass="form-control item" ID="TextBox6" placeholder="Password" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group position-relative">
-                            <button type="button" class="btn btn-dark button-back">Back</button>
-                            <asp:Button type="submit" CssClass="btn btn-primary" ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click"/>
-                        </div>
-                    </form>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox5" placeholder="Username" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <asp:TextBox CssClass="form-control item" ID="TextBox6" placeholder="Password" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group position-relative">
+                        <button type="button" class="btn btn-dark button-back">Back</button>
+                        <asp:Button type="submit" CssClass="btn btn-primary" ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click"/>
+                    </div>
                 </div>
                 <!-- End Register body -->
                 <!-- Modal footer -->
@@ -134,10 +128,6 @@
                     <li><a class="removelinkdefault" href="Account.aspx">ACCOUNT</a></li>
                     <li><a class="removelinkdefault" href="Logout.aspx">LOGOUT</a></li>
                 <%} %>
-            <%--    <li id="li_account" runat="server"><a class="removelinkdefault" href="#" data-toggle="modal" data-target="#myModal">
-                    <asp:Label ID="Label1" runat="server" Text="ACCOUNT"></asp:Label></a></li>
-                <li><a class="removelinkdefault" href="Contact.aspx">LOGOUT</a></li>--%>
-
             </ul>
         </div>
         </div>

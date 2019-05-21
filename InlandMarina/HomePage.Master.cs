@@ -15,9 +15,13 @@ namespace InlandMarina
         {
 
         }
+
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             CustomerDB.AddCustomer(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text);
+            Customer customer = CustomerDB.GetCustomer(TextBox5.Text);
+            Session["ID"] = customer.ID;
+            Response.Redirect("Account.aspx");
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
