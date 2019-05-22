@@ -46,49 +46,73 @@
                 <div class="modal-body modal-login">
                 <h2>Login</h2>
                     <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group1" display="Dynamic" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter a username" ControlToValidate="TextBox7"></asp:RequiredFieldValidator>
+                    </div>                 
+                    <div class="form-group position-relative">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control" ID="TextBox7" placeholder="Username" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group1" display="Dynamic" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a password" ControlToValidate="TextBox8"></asp:RequiredFieldValidator>
+                    </div>  
                     <div class="form-group position-relative">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox8" placeholder="Password" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group position-relative">
                         <button type="button" class="btn btn-dark button-back">Back</button>
-                        <asp:Button type="submit" CssClass="btn btn-primary" ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click"/>
+                        <asp:Button ValidationGroup="Group1" type="submit" CssClass="btn btn-primary" ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click"/>
                     </div>
                 </div>
                 <!-- End Login Modal -->
                 <!-- Start Register Modal -->
                 <div class="modal-body modal-register">
                     <h2>Register</h2>
+                     <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter a first name" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                    </div>  
                     <div class="form-group position-relative">
                         <i class="fa fa-file-signature" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox1" placeholder="First Name" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter a last name" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
+                    </div>  
+                    <div class="form-group position-relative">
                         <i class="fa fa-file-signature" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox2" placeholder="Last Name" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please enter a phone number" ControlToValidate="TextBox3"></asp:RequiredFieldValidator>
+                    </div>  
+                    <div class="form-group position-relative">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox3" placeholder="Phone Number" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator6" runat="server" ErrorMessage="Please enter a city" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                    </div>  
                         <div class="form-group position-relative">
                         <i class="fa fa-city" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox4" placeholder="City" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please enter a username" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
+                    </div>  
                         <div class="form-group position-relative">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox5" placeholder="Username" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group position-relative">
+                         <asp:RequiredFieldValidator CssClass="validationtext" ValidationGroup="Group2" display="Dynamic" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Please enter a password" ControlToValidate="TextBox6"></asp:RequiredFieldValidator>
+                    </div>  
                     <div class="form-group position-relative">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <asp:TextBox CssClass="form-control item" ID="TextBox6" placeholder="Password" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group position-relative">
                         <button type="button" class="btn btn-dark button-back">Back</button>
-                        <asp:Button type="submit" CssClass="btn btn-primary" ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click"/>
+                        <asp:Button ValidationGroup="Group2" type="submit" CssClass="btn btn-primary" ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click"/>
                     </div>
                 </div>
                 <!-- End Register body -->

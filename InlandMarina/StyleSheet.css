@@ -1,4 +1,12 @@
-﻿
+﻿.validationtext {
+    color: #fe0000;
+    display: block;
+    font-size: 14px;
+    font-weight:400;
+    padding: 12px 0 8px;
+}
+
+
 .emp-profile {
     padding: 3%;
     margin-top: 3%;
