@@ -33,10 +33,7 @@
                     <br /><br />
                     Current Lease of Customer
                     <asp:Label ID="LblCustomerName" runat="server" Text="Name"></asp:Label>
-                    
-                    <br />
-                    <asp:Label ID="LabelSession" runat="server" Text="Label" Visible="False"></asp:Label>
-                    <br />
+                    <br /><br />
                     <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False" 
                         CssClass="table table-responsive table-striped table-hover table-bordered rounded shadow" Width="75px">
                         <Columns>

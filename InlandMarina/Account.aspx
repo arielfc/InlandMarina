@@ -11,7 +11,7 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                                     </h5>
                                     <h6>
                                         Web Developer and Designer
@@ -48,7 +48,7 @@
                                         <label>User Id</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Kshiti123</p>
+                                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -56,7 +56,7 @@
                                         <label>Name</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Kshiti Ghelani</p>
+                                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -64,7 +64,9 @@
                                         <label>Email</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>kshitighelani@gmail.com</p>
+                                        <p>
+                                            <asp:Label ID="Label3" runat="server" Text="E-Mail"></asp:Label>
+                                            kshitighelani@gmail.com</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -72,7 +74,7 @@
                                         <label>Phone</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>123 456 7890</p>
+                                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -80,19 +82,33 @@
                                         <label>Profession</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Web Developer and Designer</p>
+                                        <p>
+                                            <asp:Label ID="Label5" runat="server" Text="Profession"></asp:Label>
+                                            Web Developer and Designer</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Experience</label>
+                                        <!--<label>Experience</label>-->
+                                        <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False" 
+                                            CssClass="table table-responsive table-striped table-hover table-bordered rounded" Width="75px">
+                                            <Columns>
+                                                <asp:BoundField DataField="ID" HeaderText="ID" Visible="False" />
+                                                <asp:BoundField DataField="SlipID" HeaderText="Slip ID" />
+                                                <asp:BoundField DataField="CustomerID" HeaderText="Customer ID" Visible="False" />
+                                            </Columns>
+                                        </asp:GridView>
                                     </div>
+                                    <!--
                                     <div class="col-md-6">
                                         <p>Expert</p>
+                                        
                                     </div>
+                                    -->
                                 </div>
+                                <!--
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Hourly Rate</label>
@@ -101,6 +117,7 @@
                                         <p>10$/hr</p>
                                     </div>
                                 </div>
+                                -->
                             </div>
                         </div>
                     </div>
