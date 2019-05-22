@@ -28,10 +28,15 @@
                         <SelectedRowStyle BackColor="Silver" />
                     </asp:GridView>
                     <asp:Label ID="LblDockWarning" runat="server" Text="Exception Text" Visible="False"></asp:Label>
-                    <br />
+                    
+                    <% if (Session["ID"] != null) { %>
+                    <br /><br />
                     Current Lease of Customer
                     <asp:Label ID="LblCustomerName" runat="server" Text="Name"></asp:Label>
-                    <br /><br />
+                    
+                    <br />
+                    <asp:Label ID="LabelSession" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <br />
                     <asp:GridView ID="GridViewCurrentLease" runat="server" AutoGenerateColumns="False" 
                         CssClass="table table-responsive table-striped table-hover table-bordered rounded shadow" Width="75px">
                         <Columns>
@@ -40,6 +45,7 @@
                             <asp:BoundField DataField="CustomerID" HeaderText="Customer ID" Visible="False" />
                         </Columns>
                     </asp:GridView>
+                     <% } %>
                     <br />
                 </div>
 
@@ -63,6 +69,9 @@
                     <br />
                     <br />
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Lease"/>
+                    <br />
+                    <br />
+                    <asp:Label ID="LblPromptSignIn" runat="server" Text="Please Log In first" Visible="False"></asp:Label>
                 </div>
                 </div>
             </div>

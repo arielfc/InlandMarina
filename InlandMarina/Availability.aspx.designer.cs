@@ -67,6 +67,15 @@ namespace InlandMarina {
         protected global::System.Web.UI.WebControls.Label LblCustomerName;
         
         /// <summary>
+        /// LabelSession control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSession;
+        
+        /// <summary>
         /// GridViewCurrentLease control.
         /// </summary>
         /// <remarks>
@@ -110,5 +119,14 @@ namespace InlandMarina {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// LblPromptSignIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPromptSignIn;
     }
 }

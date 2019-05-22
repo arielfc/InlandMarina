@@ -11,33 +11,29 @@ namespace InlandMarina
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        int customerID = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
+            int customerID;
             try
-            {/*
+            {
+                /*
                 GridViewDock0.DataSource = DockDB.GetDocks();
                 GridViewDock0.DataBind();
-                20190517 commented because these are setting up on page*/
-                
+                20190517 commented because these are setting up on page
+                */
                 
                 GridViewSlip_Available();
-                LblCustomerName.Text =
+                if (HttpContext.Current.Session["ID"] != null)
+                {
+                    customerID = Convert.ToInt32(HttpContext.Current.Session["ID"]);
+                    LblCustomerName.Text =
                     CustomerDB.GetCustomer(customerID).FirstName
                     + " " + CustomerDB.GetCustomer(customerID).LastName;
-                GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
-                GridViewCurrentLease.DataBind();
-                /*
-                if (CustomerDB.UpdateCustomer(5, "Tom", "Hanks", "568", "Washington"))
-                {
-                    LblCustomerName.Text = "Good00";
+                    GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
+                    GridViewCurrentLease.DataBind();
                 }
                 
-                if (CustomerDB.AddCustomer("Hohoho", "Hahaha", "568", "Washington","HH", "1"))
-                {
-                    LblCustomerName.Text = "Good01";
-                }
-                20190517 for test only */
+
             }
             catch (Exception ex)
             {
@@ -88,18 +84,28 @@ namespace InlandMarina
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            GridViewRow dock = GridViewSlip0.SelectedRow;
-            
-            LeaseDB.AddLease(Convert.ToInt32(dock.Cells[0].Text), customerID);
+            if (HttpContext.Current.Session["ID"] != null)
+            {
+                GridViewRow dock = GridViewSlip0.SelectedRow;
+                LeaseDB.AddLease(Convert.ToInt32(dock.Cells[0].Text), 
+                    Convert.ToInt32(HttpContext.Current.Session["ID"]));
 
-            GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(customerID);
-            GridViewCurrentLease.DataBind();
-            GridViewSlip_Available();
+                GridViewCurrentLease.DataSource = LeaseDB.GetLeasesByCustomerID(
+                    Convert.ToInt32(HttpContext.Current.Session["ID"]));
+                GridViewCurrentLease.DataBind();
+                GridViewSlip_Available();
+            }
+            else
+            {
+                LblPromptSignIn.Visible = true;
+            }
         }
 
         protected void GridViewSlip0_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

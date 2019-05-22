@@ -14,7 +14,7 @@ namespace DataLayer
     {
         public static Customer GetCustomer(int ID)
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             Customer s = new Customer();
             try
             {
@@ -50,7 +50,7 @@ namespace DataLayer
         
         public static Customer GetCustomer(string un)
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             Customer s = new Customer();
             try
             {
@@ -102,7 +102,7 @@ namespace DataLayer
                 " (FirstName, LastName, Phone, City, UserName, Password) " +
                 " VALUES " +
                 "(@FirstName, @LastName, @Phone, @City, @UserName, @Password)";
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             SqlCommand command = new SqlCommand(sql, connection);
 
             command.Parameters.AddWithValue("@FirstName", FirstName);
@@ -130,7 +130,7 @@ namespace DataLayer
                 " Set FirstName=@FirstName, LastName=@LastName, " +
                 " Phone=@Phone, City=@City " +
                 " WHERE ID =" + ID;
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             SqlCommand command = new SqlCommand(sql, connection);
 
             command.Parameters.AddWithValue("@FirstName", FirstName);

@@ -9,7 +9,7 @@ namespace DataLayer
 {
     class MarinaDB
     {
-        public static SqlConnection GetConneciton()
+        public static SqlConnection GetConnection()
         {/*
             string ConnectionString = "Data Source=DESKTOP-JE6DIRU;" +
                 "Initial Catalog = Marina;" +

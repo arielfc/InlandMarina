@@ -12,7 +12,7 @@ namespace DataLayer
     {
         public static List<Slip> GetSlips()
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Slip> results = new List<Slip>();
             try
             {
@@ -41,7 +41,7 @@ namespace DataLayer
 
         public static List<Slip> GetSlips(int ID)
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Slip> results = new List<Slip>();
             try
             {

@@ -34,7 +34,8 @@ namespace InlandMarina
                 // If both usemname and password match database, set session["ID"] and redirect to home page
                 //	Response.Write("<script>alert('Match!')</script>");
                 Session["ID"] = customer.ID;
-                Response.Redirect("Account.aspx");
+                //Response.Redirect("Account.aspx"); 20190521 temporary
+                Response.Redirect("Availability.aspx");
             }
             else
             {

@@ -13,7 +13,7 @@ namespace DataLayer
     {
         public static List<Dock> GetDocks()
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Dock> results = new List<Dock>();
             try
             {

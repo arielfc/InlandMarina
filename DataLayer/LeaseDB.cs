@@ -12,7 +12,7 @@ namespace DataLayer
     {
         public static List<Lease> GetLeases()
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Lease> result = new List<Lease>();
             try
             {
@@ -46,7 +46,7 @@ namespace DataLayer
 
         public static List<Lease> GetLeasesBySlipID(int ID)
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Lease> result = new List<Lease>();
             try
             {
@@ -80,7 +80,7 @@ namespace DataLayer
 
         public static List<Lease> GetLeasesByCustomerID(int ID)
         {
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             List<Lease> result = new List<Lease>();
             try
             {
@@ -117,7 +117,7 @@ namespace DataLayer
                 " (SlipId, CustomerID) " +
                 " VALUES " +
                 "(@slipid, @customerid)";
-            SqlConnection connection = MarinaDB.GetConneciton();
+            SqlConnection connection = MarinaDB.GetConnection();
             SqlCommand command = new SqlCommand(sql, connection);
 
             command.Parameters.AddWithValue("@SlipId", slipid);
