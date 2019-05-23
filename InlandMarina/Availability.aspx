@@ -41,7 +41,6 @@
                             <asp:CheckBoxField DataField="WaterService" HeaderText="WaterService" SortExpression="WaterService" />
                             <asp:CheckBoxField DataField="ElectricalService" HeaderText="ElectricalService" SortExpression="ElectricalService" />
                             <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
-                            <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                         </Columns>
                         <SelectedRowStyle BackColor="Silver" />
                     </asp:GridView>
