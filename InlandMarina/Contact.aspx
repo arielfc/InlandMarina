@@ -4,7 +4,7 @@
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12 text-center">
-            <h1 class="text-white font-weight-light">CONTACT US</h1>
+              <h2 class="text-white font-weight-bold">Contact us</h2>
           </div>
         </div>
       </div>

@@ -21,6 +21,7 @@ namespace InlandMarina
                     Label1.Text = customer.ID.ToString();
                     Label2.Text = customer.FirstName + " " + customer.LastName;
                     Label4.Text = customer.Phone;
+                    Label5.Text = customer.City;
                     Label6.Text = customer.FirstName + " " + customer.LastName;
 
                 

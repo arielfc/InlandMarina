@@ -11,7 +11,7 @@
               <h3 class="text-white font-weight-bold">YOUR PARADISE AWAITS</h3>
           </div>
           <div class="col-lg-8 align-self-baseline">
-              <a class="btn btn-outline-primary btn-xl js-scroll-trigger" href="Availability.aspx">AVAILABILITY</a>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="Availability.aspx">AVAILABILITY</a>
          </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">ABOUT US</h2>
-          <%--<h3 class="section-subheading text-muted"></h3>--%>
+          <br />
         </div>
       </div>
       <div class="row">
