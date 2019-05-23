@@ -1,4 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Availability.aspx.cs" Inherits="InlandMarina.WebForm3" %>
+<asp:Content ID="Content3" ContentPlaceHolderID="Masthead" runat="server">
+<style>
+    .masthead:before{
+        background-image: url('https://cdn.pixabay.com/photo/2017/12/13/12/37/panorama-3016694_1280.jpg');
+    }
+</style>    
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="text-white font-weight-light">AVAILABILITY</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+</asp:Content>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
     <p>
