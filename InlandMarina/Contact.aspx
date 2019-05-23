@@ -1,4 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="InlandMarina.WebForm2" %>
+<asp:Content ID="Content3" ContentPlaceHolderID="Masthead" runat="server">
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="text-white font-weight-light">CONTACT US</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
     <div class="contact-clean container">

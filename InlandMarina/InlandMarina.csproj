@@ -71,6 +71,10 @@
     <Content Include="Assets\logo1.png" />
     <Content Include="Assets\logo2.png" />
     <Content Include="Assets\logo_transparent.png" />
+    <Content Include="Assets\marina1.jpg" />
+    <Content Include="Assets\marina2.jpg" />
+    <Content Include="Assets\marinaold.jpg" />
+    <Content Include="Assets\ocean.jpg" />
     <Content Include="JavaScript.js" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
