@@ -12,7 +12,7 @@
                 <div class="ml-lg-5 ml-md-5 ml-sm-5 ml-5">
                     Available Docks
                     <br />
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InlandMarinaScriptConnectionString %>" SelectCommand="SELECT * FROM [Dock]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:softdev0516ConnectionString %>" SelectCommand="SELECT * FROM [Dock]"></asp:SqlDataSource>
                     <br />
                     <asp:GridView ID="GridViewDock0" runat="server" AutoGenerateColumns="False" 
                         OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
@@ -23,6 +23,7 @@
                             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                             <asp:CheckBoxField DataField="WaterService" HeaderText="WaterService" SortExpression="WaterService" />
                             <asp:CheckBoxField DataField="ElectricalService" HeaderText="ElectricalService" SortExpression="ElectricalService" />
+                            <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                             <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
                         </Columns>
                         <SelectedRowStyle BackColor="Silver" />

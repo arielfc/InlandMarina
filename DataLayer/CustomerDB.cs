@@ -38,7 +38,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+                ;
             }
             finally
             {
@@ -75,7 +75,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                return null;
+                ;
             }
             finally
             {
@@ -98,6 +98,11 @@ namespace DataLayer
         public static bool AddCustomer(string FirstName, string LastName,
             string Phone, string City, string UserName, string Password)
         {
+            if (FirstName == null || LastName == null || Phone == null ||
+                City == null|| UserName == null|| Password == null)
+            {
+                return false;
+            }
             string sql = "INSERT INTO Customer" +
                 " (FirstName, LastName, Phone, City, UserName, Password) " +
                 " VALUES " +
@@ -126,6 +131,11 @@ namespace DataLayer
         public static bool UpdateCustomer(int ID, string FirstName, string LastName,
             string Phone, string City)
         {
+            if (FirstName == null || LastName == null || Phone == null ||
+                City == null)
+            {
+                return false;
+            }
             string sql = "UPDATE Customer" +
                 " Set FirstName=@FirstName, LastName=@LastName, " +
                 " Phone=@Phone, City=@City " +

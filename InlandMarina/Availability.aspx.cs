@@ -38,7 +38,7 @@ namespace InlandMarina
             catch (Exception ex)
             {
                 LblDockWarning.Visible = true;
-                LblDockWarning.Text = ex.Message;
+                LblDockWarning.Text = "Dock"+ " "+ex.Message;
                 // more ...
             }
         }
