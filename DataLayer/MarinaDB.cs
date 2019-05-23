@@ -10,18 +10,23 @@ namespace DataLayer
     class MarinaDB
     {
         public static SqlConnection GetConnection()
-        {/*
+        {
+            // Local DB
+            /*
             string ConnectionString = "Data Source=DESKTOP-JE6DIRU;" +
                 "Initial Catalog = Marina;" +
                 "Integrated Security = true;";
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = ConnectionString;
             */
+
+            // Remote DB
+
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "softdev0516.database.windows.net";
+            builder.DataSource = "softdev0523.database.windows.net";
             builder.UserID = "softdevlogin";
             builder.Password = "softDevma3$";
-            builder.InitialCatalog = "InlandMarinaScript";
+            builder.InitialCatalog = "softdev0516";
             SqlConnection connection = new SqlConnection(builder.ConnectionString);
 
             try

@@ -38,7 +38,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-
+                ;
             }
             finally
             {
@@ -75,7 +75,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                return null;
+                ;
             }
             finally
             {
